@@ -47,7 +47,9 @@ services:
     volumes:
       - certbot-etc:/etc/letsencrypt
       - drupal-data:/var/www/html
-    command: certonly --webroot --webroot-path=/var/www/html --email hardeep.singh18@outlook.com --agree-tos --no-eff-email --staging -d drupal.avleen.in -d www.drupal.avleen.in
+    #command: certonly --webroot --webroot-path=/var/www/html --email hardeep.singh18@outlook.com --agree-tos --no-eff-email --staging -d drupal.avleen.in -d www.drupal.avleen.in
+    command: certonly --webroot --webroot-path=/var/www/html --email hardeep.singh18@outlook.com --agree-tos --no-eff-email --force-renewal -d drupal.avleen.in -d www.drupal.avleen.in
+
 
 networks:
   external:
